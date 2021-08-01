@@ -104,8 +104,8 @@ class Order:
     def input_and_change_money(self):
         if len(self.item_order_list)>=1:
             while True:
-                self.money=input("お預かり金を入力してください >>> ")
-                self.change_money=int(self.money)-self.sum_price #おつり
+                self.money=int(input("お預かり金を入力してください >>> "))
+                self.change_money = self.money - self.sum_price #おつり
                 if self.change_money>=0:
                     self.write_receipt("お預り金:￥{:,}".format(self.money))
                     self.write_receipt("お釣り：￥{:,}".format(self.change_money))

@@ -25,9 +25,11 @@
 import pandas as pd
 import sys
 import datetime
+import os
 
 ITEM_MASTER_CSV_PATH="./item_master.csv"
 RECEIPT_FOLDER="./receipt"
+os.makedirs(RECEIPT_FOLDER, exist_ok=True)
 
 ### 商品クラス
 class Item:
